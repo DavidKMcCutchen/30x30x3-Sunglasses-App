@@ -1,0 +1,27 @@
+<mat-card class="list">
+    <mat-card-header>
+      <mat-card-title> <h1>Select a Pair of Sunglasses</h1> </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item
+          *ngFor="let sunglass of sunglasses"
+          (click)="selected.emit(sunglass)"
+          class="mat-list-item"
+        >
+          <h1 matLine>{{ sunglass.brand }}</h1>
+          <p matLine>{{ sunglass.style }}</p>
+          <p matLine>{{ sunglass.lensColor }}</p>
+          <p matLine>{{ sunglass.frameColor }}</p>
+          <p matLine>{{ sunglass.lensOpacity }}%</p>
+
+          <button
+            mat-icon-button
+            (click)="deleted.emit(sunglass.id); $event.stopImmediatePropagation()"
+          >
+            <mat-icon *ngIf="!readonly">cancel</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>

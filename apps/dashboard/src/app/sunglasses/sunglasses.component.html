@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="col-50" layout="row" layout-align="center center">
+      <sunglasses-sunglasses-list
+        [sunglasses]="sunglasses$ | async"
+        (selected)="selectedSunglass($event)"
+        (deleted)="deleteSunglass($event)"
+      ></sunglasses-sunglasses-list>
+    </div>
+    <div class="col-50" layout="row" layout-align="center center">
+      <sunglasses-sunglasses-details
+        [form]="form"
+        [sunglass]="selectedSunglass$ | async"
+        (save)="saveSunglass($event)"
+        (cancelled)="cancel()"
+      ></sunglasses-sunglasses-details>
+    </div>
+  </div>

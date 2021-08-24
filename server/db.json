@@ -1,0 +1,13 @@
+{
+    "sunglasses": [
+        {
+        "id": 1,
+        "brand": "Oakleys",
+        "style": "Frogskin",
+        "lensColor": "Light Blue",
+        "frameColor": "Matte Black",
+        "lensOpacity": 15,
+        "polarized": true
+        }
+    ]
+}
